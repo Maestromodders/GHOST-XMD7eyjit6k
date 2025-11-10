@@ -145,8 +145,8 @@ const soraCommand = require('./commands/sora');
 // Global settings
 global.packname = settings.packname;
 global.author = settings.author;
-global.channelLink = "https://whatsapp.com/channel/0029Va90zAnIHphOuO8Msp3A";
-global.ytch = "Mr Unique Hacker";
+global.channelLink = "https://whatsapp.com/channel/0029Vb6jxRD7IUYbQfokIu2s";
+global.ytch = "MrHacker";
 
 // Add this near the top of main.js with other global configurations
 const channelInfo = {
@@ -154,8 +154,8 @@ const channelInfo = {
         forwardingScore: 1,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
-            newsletterJid: '120363161513685998@newsletter',
-            newsletterName: 'KnightBot MD',
+            newsletterJid: '120363401087525436@newsletter',
+                        newsletterName: 'HACKLINK',
             serverMessageId: -1
         }
     }
@@ -801,7 +801,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
                 await stickerTelegramCommand(sock, chatId, message);
                 break;
 
-            case userMessage === '.vv':
+            case userMessage === '.👀':
                 await viewOnceCommand(sock, chatId, message);
                 break;
             case userMessage === '.clearsession' || userMessage === '.clearsesi':
