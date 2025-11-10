@@ -27,6 +27,8 @@ const insults = [
     "Your brain's running Windows 95—slow and outdated.",
     "You're like a speed bump—nobody likes you, but everyone has to deal with you.",
     "You're like a cloud of mosquitoes—just irritating.",
+    "MATAKO HII.",
+    "MTOTO MJINGA KAMA BABAKE.",
     "You bring people together... to talk about how annoying you are."
 ];
 
