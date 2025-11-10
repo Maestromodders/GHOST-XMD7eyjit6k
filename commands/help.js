@@ -270,7 +270,7 @@ Join our channel for updates:`;
                     forwardingScore: 1,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                         newsletterJid: '120363401087525436@newsletter',
+                         newsletterJid: '120363302272656375@newsletter',
                         newsletterName: 'HACKLINK',
                         serverMessageId: -1
                     }
