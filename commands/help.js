@@ -5,106 +5,111 @@ const path = require('path');
 async function helpCommand(sock, chatId, message) {
     const helpMessage = `
 ╔═══════════════════╗
-   *🤖 ${settings.botName || 'KnightBot-MD'}*  
-   Version: *${settings.version || '3.0.0'}*
-   by ${settings.botOwner || 'Mr Unique Hacker'}
-   YT : ${global.ytch}
+║  *🤖 ${settings.botName || 'KnightBot-MD'}*  
+║   Version: *${settings.version || '3.0.0'}*
+║   by ${settings.botOwner || 'Mr Unique Hacker'}
+║   YT : ${global.ytch}
 ╚═══════════════════╝
 
 *Available Commands:*
 
 ╔═══════════════════╗
 🌐 *General Commands*:
+║═════════════════╗
 ║ ➤ .help or .menu
 ║ ➤ .ping
 ║ ➤ .alive
-║ ➤ .tts <text>
+║ ➤ .tts
 ║ ➤ .owner
 ║ ➤ .joke
 ║ ➤ .quote
 ║ ➤ .fact
-║ ➤ .weather <city>
+║ ➤ .weather
 ║ ➤ .news
-║ ➤ .attp <text>
-║ ➤ .lyrics <song_title>
-║ ➤ .8ball <question>
+║ ➤ .attp
+║ ➤ .lyrics
+║ ➤ .8ball
 ║ ➤ .groupinfo
 ║ ➤ .staff or .admins 
 ║ ➤ .vv
-║ ➤ .trt <text> <lang>
-║ ➤ .ss <link>
+║ ➤ .trt
+║ ➤ .ss
 ║ ➤ .jid
 ║ ➤ .url
 ╚═══════════════════╝ 
 
 ╔═══════════════════╗
 👮‍♂️ *Admin Commands*:
-║ ➤ .ban @user
-║ ➤ .promote @user
-║ ➤ .demote @user
-║ ➤ .mute <minutes>
+║═════════════════╗
+║ ➤ .ban
+║ ➤ .promote
+║ ➤ .demote
+║ ➤ .mute
 ║ ➤ .unmute
 ║ ➤ .delete or .del
-║ ➤ .kick @user
-║ ➤ .warnings @user
-║ ➤ .warn @user
+║ ➤ .kick
+║ ➤ .warnings
+║ ➤ .warn
 ║ ➤ .antilink
 ║ ➤ .antibadword
 ║ ➤ .clear
-║ ➤ .tag <message>
+║ ➤ .tag
 ║ ➤ .tagall
 ║ ➤ .tagnotadmin
-║ ➤ .hidetag <message>
+║ ➤ .hidetag
 ║ ➤ .chatbot
 ║ ➤ .resetlink
-║ ➤ .antitag <on/off>
-║ ➤ .welcome <on/off>
-║ ➤ .goodbye <on/off>
-║ ➤ .setgdesc <description>
-║ ➤ .setgname <new name>
-║ ➤ .setgpp (reply to image)
+║ ➤ .antitag
+║ ➤ .welcome
+║ ➤ .goodbye
+║ ➤ .setgdesc
+║ ➤ .setgname
+║ ➤ .setgpp
 ╚═══════════════════╝
 
 ╔═══════════════════╗
 🔒 *Owner Commands*:
-║ ➤ .mode <public/private>
+║═════════════════╗
+║ ➤ .mode
 ║ ➤ .clearsession
 ║ ➤ .antidelete
 ║ ➤ .cleartmp
 ║ ➤ .update
 ║ ➤ .settings
-║ ➤ .setpp <reply to image>
-║ ➤ .autoreact <on/off>
-║ ➤ .autostatus <on/off>
-║ ➤ .autostatus react <on/off>
-║ ➤ .autotyping <on/off>
-║ ➤ .autoread <on/off>
-║ ➤ .anticall <on/off>
-║ ➤ .pmblocker <on/off/status>
-║ ➤ .pmblocker setmsg <text>
-║ ➤ .setmention <reply to msg>
-║ ➤ .mention <on/off>
+║ ➤ .setpp
+║ ➤ .autoreact
+║ ➤ .autostatus
+║ ➤ .autostatus react
+║ ➤ .autotyping
+║ ➤ .autoread
+║ ➤ .anticall
+║ ➤ .pmblocker
+║ ➤ .pmblocker setmsg
+║ ➤ .setmention
+║ ➤ .mention
 ╚═══════════════════╝
 
 ╔═══════════════════╗
 🎨 *Image/Sticker Commands*:
-║ ➤ .blur <image>
-║ ➤ .simage <reply to sticker>
-║ ➤ .sticker <reply to image>
+║═════════════════╗
+║ ➤ .blur
+║ ➤ .simage
+║ ➤ .sticker
 ║ ➤ .removebg
 ║ ➤ .remini
-║ ➤ .crop <reply to image>
-║ ➤ .tgsticker <Link>
+║ ➤ .crop
+║ ➤ .tgsticker
 ║ ➤ .meme
-║ ➤ .take <packname> 
-║ ➤ .emojimix <emj1>+<emj2>
-║ ➤ .igs <insta link>
-║ ➤ .igsc <insta link>
+║ ➤ .take
+║ ➤ .emojimix
+║ ➤ .igs
+║ ➤ .igsc
 ╚═══════════════════╝  
 
 ╔═══════════════════╗
 🖼️ *Pies Commands*:
-║ ➤ .pies <country>
+║═════════════════╗
+║ ➤ .pies
 ║ ➤ .china 
 ║ ➤ .indonesia 
 ║ ➤ .japan 
@@ -114,75 +119,81 @@ async function helpCommand(sock, chatId, message) {
 
 ╔═══════════════════╗
 🎮 *Game Commands*:
-║ ➤ .tictactoe @user
+║═════════════════╗
+║ ➤ .tictactoe
 ║ ➤ .hangman
-║ ➤ .guess <letter>
+║ ➤ .guess
 ║ ➤ .trivia
-║ ➤ .answer <answer>
+║ ➤ .answer
 ║ ➤ .truth
 ║ ➤ .dare
 ╚═══════════════════╝
 
 ╔═══════════════════╗
 🤖 *AI Commands*:
-║ ➤ .gpt <question>
-║ ➤ .gemini <question>
-║ ➤ .imagine <prompt>
-║ ➤ .flux <prompt>
-║ ➤ .sora <prompt>
+║═════════════════╗
+║ ➤ .gpt
+║ ➤ .gemini
+║ ➤ .imagine
+║ ➤ .flux
+║ ➤ .sora
 ╚═══════════════════╝
 
 ╔═══════════════════╗
 🎯 *Fun Commands*:
-║ ➤ .compliment @user
-║ ➤ .insult @user
+║═════════════════╗
+║ ➤ .compliment
+║ ➤ .insult
 ║ ➤ .flirt 
 ║ ➤ .shayari
 ║ ➤ .goodnight
 ║ ➤ .roseday
-║ ➤ .character @user
-║ ➤ .wasted @user
-║ ➤ .ship @user
-║ ➤ .simp @user
-║ ➤ .stupid @user [text]
+║ ➤ .character
+║ ➤ .wasted
+║ ➤ .ship
+║ ➤ .simp
+║ ➤ .stupid
 ╚═══════════════════╝
 
 ╔═══════════════════╗
 🔤 *Textmaker*:
-║ ➤ .metallic <text>
-║ ➤ .ice <text>
-║ ➤ .snow <text>
-║ ➤ .impressive <text>
-║ ➤ .matrix <text>
-║ ➤ .light <text>
-║ ➤ .neon <text>
-║ ➤ .devil <text>
-║ ➤ .purple <text>
-║ ➤ .thunder <text>
-║ ➤ .leaves <text>
-║ ➤ .1917 <text>
-║ ➤ .arena <text>
-║ ➤ .hacker <text>
-║ ➤ .sand <text>
-║ ➤ .blackpink <text>
-║ ➤ .glitch <text>
-║ ➤ .fire <text>
+║═════════════════╗
+║ ➤ .metallic
+║ ➤ .ice
+║ ➤ .snow
+║ ➤ .impressive
+║ ➤ .matrix
+║ ➤ .light
+║ ➤ .neon
+║ ➤ .devil
+║ ➤ .purple
+║ ➤ .thunder
+║ ➤ .leaves
+║ ➤ .1917
+║ ➤ .arena
+║ ➤ .hacker
+║ ➤ .sand
+║ ➤ .blackpink
+║ ➤ .glitch
+║ ➤ .fire
 ╚═══════════════════╝
 
 ╔═══════════════════╗
 📥 *Downloader*:
-║ ➤ .play <song_name>
-║ ➤ .song <song_name>
-║ ➤ .spotify <query>
-║ ➤ .instagram <link>
-║ ➤ .facebook <link>
-║ ➤ .tiktok <link>
-║ ➤ .video <song name>
-║ ➤ .ytmp4 <Link>
+║═════════════════╗
+║ ➤ .play
+║ ➤ .song
+║ ➤ .spotify
+║ ➤ .instagram
+║ ➤ .facebook
+║ ➤ .tiktok
+║ ➤ .video
+║ ➤ .ytmp4
 ╚═══════════════════╝
 
 ╔═══════════════════╗
 🧩 *MISC*:
+║═════════════════╗
 ║ ➤ .heart
 ║ ➤ .horny
 ║ ➤ .circle
@@ -203,6 +214,7 @@ async function helpCommand(sock, chatId, message) {
 
 ╔═══════════════════╗
 🖼️ *ANIME*:
+║═════════════════╗
 ║ ➤ .nom 
 ║ ➤ .poke 
 ║ ➤ .cry 
@@ -215,6 +227,7 @@ async function helpCommand(sock, chatId, message) {
 
 ╔═══════════════════╗
 💻 *Github Commands:*
+║═════════════════╗
 ║ ➤ .git
 ║ ➤ .github
 ║ ➤ .sc
@@ -224,12 +237,32 @@ async function helpCommand(sock, chatId, message) {
 
 Join our channel for updates:`;
 
+
     try {
         const imagePath = path.join(__dirname, '../assets/bot_image.jpg');
-        
+        const audioUrls = [
+            'https://files.catbox.moe/hpwsi2.mp3',
+            'https://files.catbox.moe/xci982.mp3',
+            'https://files.catbox.moe/utbujd.mp3',
+            'https://files.catbox.moe/w2j17k.m4a',
+            'https://files.catbox.moe/851skv.m4a',
+            'https://files.catbox.moe/qnhtbu.m4a',
+            'https://files.catbox.moe/lb0x7w.mp3',
+            'https://files.catbox.moe/efmcxm.mp3',
+            'https://files.catbox.moe/gco5bq.mp3',
+            'https://files.catbox.moe/26oeeh.mp3',
+            'https://files.catbox.moe/a1sh4u.mp3',
+            'https://files.catbox.moe/vuuvwn.m4a',
+            'https://files.catbox.moe/wx8q6h.mp3',
+            'https://files.catbox.moe/uj8fps.m4a',
+            'https://files.catbox.moe/dc88bx.m4a',
+            'https://files.catbox.moe/tn32z0.m4a'
+        ];
+
+        const randomAudioUrl = audioUrls[Math.floor(Math.random() * audioUrls.length)];
+
         if (fs.existsSync(imagePath)) {
             const imageBuffer = fs.readFileSync(imagePath);
-            
             await sock.sendMessage(chatId, {
                 image: imageBuffer,
                 caption: helpMessage,
@@ -237,27 +270,22 @@ Join our channel for updates:`;
                     forwardingScore: 1,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363161513685998@newsletter',
-                        newsletterName: 'KnightBot MD',
+                         newsletterJid: '120363401087525436@newsletter',
+                        newsletterName: 'HACKLINK',
                         serverMessageId: -1
                     }
                 }
-            },{ quoted: message });
+            }, { quoted: message });
         } else {
-            console.error('Bot image not found at:', imagePath);
-            await sock.sendMessage(chatId, { 
-                text: helpMessage,
-                contextInfo: {
-                    forwardingScore: 1,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363161513685998@newsletter',
-                        newsletterName: 'KnightBot MD by Mr Unique Hacker',
-                        serverMessageId: -1
-                    } 
-                }
-            });
+            await sock.sendMessage(chatId, { text: helpMessage });
         }
+
+        // 🎵 Random background music playback
+        await sock.sendMessage(chatId, {
+            audio: { url: randomAudioUrl },
+            mimetype: 'audio/mp4'
+        }, { quoted: message });
+
     } catch (error) {
         console.error('Error in help command:', error);
         await sock.sendMessage(chatId, { text: helpMessage });
