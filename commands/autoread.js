@@ -28,8 +28,8 @@ async function autoreadCommand(sock, chatId, message) {
                     forwardingScore: 1,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363161513685998@newsletter',
-                        newsletterName: 'KnightBot MD',
+                        newsletterJid: '120363401087525436@newsletter',
+                    newsletterName: 'HACKLINK',
                         serverMessageId: -1
                     }
                 }
@@ -59,8 +59,8 @@ async function autoreadCommand(sock, chatId, message) {
                         forwardingScore: 1,
                         isForwarded: true,
                         forwardedNewsletterMessageInfo: {
-                            newsletterJid: '120363161513685998@newsletter',
-                            newsletterName: 'KnightBot MD',
+                             newsletterJid: '120363401087525436@newsletter',
+                    newsletterName: 'HACKLINK',
                             serverMessageId: -1
                         }
                     }
@@ -82,8 +82,8 @@ async function autoreadCommand(sock, chatId, message) {
                 forwardingScore: 1,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363161513685998@newsletter',
-                    newsletterName: 'KnightBot MD',
+                    newsletterJid: '120363401087525436@newsletter',
+                    newsletterName: 'HACKLINK',
                     serverMessageId: -1
                 }
             }
@@ -97,8 +97,8 @@ async function autoreadCommand(sock, chatId, message) {
                 forwardingScore: 1,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363161513685998@newsletter',
-                    newsletterName: 'KnightBot MD',
+                    newsletterJid: '120363401087525436@newsletter',
+                    newsletterName: 'HACKLINK',
                     serverMessageId: -1
                 }
             }
